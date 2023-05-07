@@ -9,7 +9,7 @@ todo_list = []
 templates = Jinja2Templates(directory="templates/")
 
 
-#테스트
+#테스트##
 @todo_router.post("/todo")
 async def add_todo(request: Request, todo: Todo = Depends(Todo.as_form)):
     todo.id = len(todo_list) + 1
